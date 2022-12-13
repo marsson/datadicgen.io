@@ -2,8 +2,11 @@ title: dataDicGen
 logo: /assets/img/Marcelo.png
 description: Data Dictionary generator for Salesforce by Marsson
 show_downloads: true
-google_analytics:
+google_analytics: G-JR9ZR6PTEG
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
 github:
   repository_url: https://github.com/marsson/dataDicGen
+
+plugins:
+  - jekyll-seo-tag
