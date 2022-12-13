@@ -1,32 +1,33 @@
 ---
 layout: default
 ---
+# How did we get here?
+A common point of salesforce implementations is the need to document the data model of the current implementation. 
+Several different tools have tried, but none was able to achieve my requirements, so I decided to implement a solution myself.
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+### Requirements:
+* The data dictionary should be able to display standard objects and fields.
+* The data dictionary should be able to display custom objects and fields.
+* The data dictionary should be able to display managed package objects.
+* The data dictionary should display Salesforce's data categorization.
+* The data dictionary should display help text and description from fields.
 
-[Link to another page](./another-page.html).
+Seems simple, but the data required for getting all this information was across multiple metadata.
+This added complexity made it challenging to list all objects in a consistent and simple way.
 
-There should be whitespace between paragraphs.
+Due to its modular and simple implementation, a SFDX plugin was defined as the development method for the solution. It gave us really good abstraction to have a simple start point. SFDX plugin gave us:
+* Authentication abstraction
+* Simplified access to metadata
+* Org access abstraction
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+As a baseline for our development, we (I) forked the awesome [data model generator](https://github.com/gavignon/sfdc-generate-data-dictionary) by @gavignon.
+Simplifications and security measures were added (no username and password as command parameters etc...), and the missing metadata was added to the data dictionary, such as data category for fields.
 
-# Header 1
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### Instalation
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+```bash
+sfdx plugins:install sfdxdatadicgen
 }
 ```
 

@@ -1,7 +1,7 @@
-title: Salesforce Data Dictionary Generator (dataDicGen)
+title: dataDicGen
 logo: /assets/img/Marcelo.png
-description: Data Dictionary generator for Salesforce implementations using sfdx
-show_downloads: false
+description: Data Dictionary generator for Salesforce by Marsson
+show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
