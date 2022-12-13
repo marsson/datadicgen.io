@@ -30,8 +30,45 @@ Simplifications and security measures were added (no username and password as co
 sfdx plugins:install sfdxdatadicgen
 ```
 
-## Usage
-
+### Usage
 ```bash
-sfdx dataDictionary:generate [-o <string>] [-m] [-s <array>] [-l <array>] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+$ sfdx dataDictionary:generate [-o <string>] [-m] [-s <array>] [-l <array>] [-v <string>] [-u <string>] [--apiversion
+<string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+```
+### OPTIONS
+
+-l, --includemanagedpackages=includemanagedpackages                               List of namespaces of manage
+packages that will be downloaded.+
+
+-m, --includemanaged                                                              boolean that indicates if managed
+package files should also be
+included
+
+-o, --output=output                                                               destination and file name for xls
+dataDictionary
+
+-s, --includestandardsobjects=includestandardsobjects                             Additional standard objects
+(Account, Contact and User go by
+default)
+
+-u, --targetusername=targetusername                                               username or alias for the target
+org; overrides default target org
+
+-v, --targetdevhubusername=targetdevhubusername                                   username or alias for the dev hub
+org; overrides default dev hub org
+
+--apiversion=apiversion                                                           override the api version used for
+api requests made by this command
+
+--json                                                                            format output as json
+
+--loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+this command invocation
+
+###EXAMPLES
+```bash
+$ sfdx dataDictionary:generate --targetusername myOrg@example.com
+```
+```bash
+$ sfdx dataDictionary:generate -u myOrgName -m true -s Case,Opportunity,Product2
 ```
