@@ -1,7 +1,9 @@
-title: Minimal theme
+title: Salesforce Data Dictionary Generator (dataDicGen)
 logo: /assets/img/Marcelo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
+description: Data Dictionary generator for Salesforce implementations using sfdx
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
+github:
+  github.repository_url: https://github.com/marsson/dataDicGen
