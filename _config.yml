@@ -6,4 +6,4 @@ google_analytics:
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
 github:
-  github.repository_url: https://github.com/marsson/dataDicGen
+  repository_url: https://github.com/marsson/dataDicGen
